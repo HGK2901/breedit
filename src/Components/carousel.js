@@ -1,21 +1,29 @@
-import React, { useState } from 'react';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import React, { useState } from "react";
+// import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const Slideshow = ({ images }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    setActiveIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const handlePrev = () => {
-    setActiveIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
   };
 
   return (
     <div className="relative">
       {/* Display current image */}
-      <img src={images[activeIndex]} alt={`Slide ${activeIndex}`} className="w-full h-full object-cover" />
+      <img
+        src={images[activeIndex]}
+        alt={`Slide ${activeIndex}`}
+        className="w-full h-full object-cover"
+      />
 
       {/* Display next and previous buttons */}
       <button

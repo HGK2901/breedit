@@ -1,3 +1,5 @@
+      // import TinderCardSwipe from '../Components/swiper.js';
+// import Index from "../Components/index.js"
 import React from "react";
 import Nav from "../Components/Nav";
 import front from "../Assests/front-removebg-preview.png";
@@ -190,6 +192,7 @@ const Home = () => {
      
       <Slideshow images={images} />
     </div> */}
+
         
         <div className="container mx-auto w-auto h-auto m-0">
       <Slideshow images={images} />
@@ -201,5 +204,53 @@ const Home = () => {
     </>
   );
 };
+
+
+
+// Usage of TinderCardSwipe component
+
+
+
+// const cards = [
+//   {
+//     id: 1,
+//     name: 'John',
+//     bio: 'Software Engineer',
+//     imageSrc: 'https://example.com/john.jpg',
+//   },
+//   {
+//     id: 2,
+//     name: 'Sarah',
+//     bio: 'UX Designer',
+//     imageSrc: 'https://example.com/sarah.jpg',
+//   },
+//   // Add more card objects as needed
+// ];
+
+//     <div>
+//       {/* Render other components */}
+//       {/* <TinderCardSwipe cards={cards} /> */}
+//     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default Home;
