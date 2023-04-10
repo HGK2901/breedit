@@ -7,16 +7,19 @@
 * {
   font-family: "Readex pro";
 }
+body {
+  background-color: #f2ebe9;
+}
 
-/* html,
+html,
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   overflow-x: hidden; 
-} */
+}
 
 .creatbutton {
   text-align: center;
@@ -28,17 +31,18 @@ body {
   border-width: 2px;
 }
 
-.creatbutton:hover {
+.button-55:hover {
   background-color: #264143;
-  color: white;
+  color: #f2ebe9;
 }
 .creatbutton2:hover {
   background-color: #264143;
-  color: white;
+  color: #f2ebe9;
 }
 .nav {
   background-color: #f2ebe9;
   font-family: "Readex pro";
+  position: sticky;
 }
 span {
   color: #de5499;
@@ -157,55 +161,53 @@ span {
 }
 
 .hover15 figure {
-	position: relative;
+  position: relative;
 }
 .hover15 figure::before {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	z-index: 2;
-	display: block;
-	content: '';
-	width: 0;
-	height: 0;
-	background: rgba(255,255,255,.2);
-	border-radius: 100%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 .hover15 figure:hover::before {
-	-webkit-animation: circle .75s;
-	animation: circle .75s;
+  -webkit-animation: circle 0.75s;
+  animation: circle 0.75s;
 }
 @-webkit-keyframes circle {
-	0% {
-		opacity: 1;
-	}
-	40% {
-		opacity: 1;
-	}
-	100% {
-		width: 200%;
-		height: 200%;
-		opacity: 0;
-	}
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
 }
 @keyframes circle {
-	0% {
-		opacity: 1;
-	}
-	40% {
-		opacity: 1;
-	}
-	100% {
-		width: 200%;
-		height: 200%;
-		opacity: 0;
-	}
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
 }
-
-
 
 /* CSS */
 .button-74 {
@@ -243,3 +245,51 @@ span {
     padding: 0 25px;
   }
 }
+
+/* navbutton ahe mc CSS */
+.button-55 {
+  align-self: center;
+  background-color: #de5499;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #f2ebe9;
+  cursor: pointer;
+  display: inline-block;
+  /* font-family: Neucha, sans-serif; */
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: 0.75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  left: 83rem;
+  top: 10px;
+  border-radius: 20px;
+}
+
+.button-55:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+
+
+
+/* CSS */
