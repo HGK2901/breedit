@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.67ace357.css",
-    "main.js": "/static/js/main.1d807973.js",
-    "static/media/niru4.png": "/static/media/niru4.e9c3dd086f0a13742feb.png",
-    "static/media/niru3.png": "/static/media/niru3.5ae83426db1e103e51a3.png",
-    "static/media/niru2.png": "/static/media/niru2.598b6241cc5b7483be93.png",
-    "static/media/niru1.png": "/static/media/niru1.a670090a4554c9d9a711.png",
-    "static/media/front-removebg-preview.png": "/static/media/front-removebg-preview.c183af6919c78e0e68c0.png",
-    "static/media/lastbcute-rabbit-illustration-rabbit-kawaii-chibi-drawing-style-rabbit-cartoon-bunny-vector-removebg-preview.png": "/static/media/lastbcute-rabbit-illustration-rabbit-kawaii-chibi-drawing-style-rabbit-cartoon-bunny-vector-removebg-preview.b181c9d1fa9e7500d602.png",
-    "static/media/hama-removebg-preview.png": "/static/media/hama-removebg-preview.aeab2ecd7cb167677749.png",
-    "static/media/lastdog1-removebg-preview.png": "/static/media/lastdog1-removebg-preview.14e3eebeef91e013dc57.png",
-    "static/media/logo.png": "/static/media/logo.91025b801aa8e3e97695.png",
-    "static/media/catimages-removebg-preview.png": "/static/media/catimages-removebg-preview.a4350fe5977e47a5b3f2.png",
-    "index.html": "/index.html",
-    "main.67ace357.css.map": "/static/css/main.67ace357.css.map",
-    "main.1d807973.js.map": "/static/js/main.1d807973.js.map"
+    "main.css": "/breedit/static/css/main.67ace357.css",
+    "main.js": "/breedit/static/js/main.36fe5751.js",
+    "static/media/niru4.png": "/breedit/static/media/niru4.e9c3dd086f0a13742feb.png",
+    "static/media/niru3.png": "/breedit/static/media/niru3.5ae83426db1e103e51a3.png",
+    "static/media/niru2.png": "/breedit/static/media/niru2.598b6241cc5b7483be93.png",
+    "static/media/niru1.png": "/breedit/static/media/niru1.a670090a4554c9d9a711.png",
+    "static/media/front-removebg-preview.png": "/breedit/static/media/front-removebg-preview.c183af6919c78e0e68c0.png",
+    "static/media/lastbcute-rabbit-illustration-rabbit-kawaii-chibi-drawing-style-rabbit-cartoon-bunny-vector-removebg-preview.png": "/breedit/static/media/lastbcute-rabbit-illustration-rabbit-kawaii-chibi-drawing-style-rabbit-cartoon-bunny-vector-removebg-preview.b181c9d1fa9e7500d602.png",
+    "static/media/hama-removebg-preview.png": "/breedit/static/media/hama-removebg-preview.aeab2ecd7cb167677749.png",
+    "static/media/lastdog1-removebg-preview.png": "/breedit/static/media/lastdog1-removebg-preview.14e3eebeef91e013dc57.png",
+    "static/media/logo.png": "/breedit/static/media/logo.91025b801aa8e3e97695.png",
+    "static/media/catimages-removebg-preview.png": "/breedit/static/media/catimages-removebg-preview.a4350fe5977e47a5b3f2.png",
+    "index.html": "/breedit/index.html",
+    "main.67ace357.css.map": "/breedit/static/css/main.67ace357.css.map",
+    "main.36fe5751.js.map": "/breedit/static/js/main.36fe5751.js.map"
   },
   "entrypoints": [
     "static/css/main.67ace357.css",
-    "static/js/main.1d807973.js"
+    "static/js/main.36fe5751.js"
   ]
 }
