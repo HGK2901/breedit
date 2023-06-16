@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "../Components/Fade";
 
 import Navbar from "../Components/Navbar";
 import Hero from "../Components/Landing Page/Hero";
@@ -15,20 +16,38 @@ import Footer from "../Components/Footer";
 // import { Router } from 'react-router-dom';
 
 const Home = () => {
-
   return (
     <>
       <Navbar />
       <Hero />
-      <Features />
-      <Content />
-      <CTA />
-      <Gallery />
-      <Blog />
-      <Testinomials />
-      <Team />
-      <Contact />
-      <Footer />
+      
+      <Fade delay={500}>
+        <Features />
+      </Fade >
+      <Fade delay={500}>
+        <Content />
+      </Fade>
+      <Fade delay={500}>
+        <CTA />
+      </Fade >
+      <Fade delay={500}>
+        <Gallery />
+      </Fade>
+      <Fade delay={500}>
+        <Blog />
+      </Fade>
+      <Fade delay={500}>
+        <Testinomials />
+      </Fade>
+      <Fade delay={500}>
+        <Team />
+      </Fade>
+      <Fade delay={500}>
+        <Contact />
+      </Fade>
+      <Fade delay={500}>
+        <Footer />
+      </Fade>
     </>
   );
 };
