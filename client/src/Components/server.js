@@ -27,10 +27,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(
-  "mongodb+srv://HarishKhandre:<password>@cluster0.9r22muj.mongodb.net/?retryWrites=true&w=majority",
-  { useNewUrlParser: true }
-);
+mongoose.connect(process.env.MONGODB_CONNECT_URL, { useNewUrlParser: true });
 mongoose.set();
 
 const userSchema = new mongoose.Schema({
@@ -59,9 +56,8 @@ passport.deserializeUser(function (id, done) {
 passport.use(
   new GoogleStrategy(
     {
-      clientID:
-        "821247292376-6og4rmko11mkj4r33jocq2bmo0bbnkep.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientID: process.env.GOOGLE_STATEGY_CLIENTID,
+      clientSecret: process.env.GOOGLE_STATEGY_CLIENT_SECRET,
       callbackURL: "http://localhost:3000/auth/google/breedit",
       userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
@@ -72,8 +68,6 @@ passport.use(
     }
   )
 );
-
-
 
 // start express server on port 5000
 
@@ -132,4 +126,3 @@ app.get(
     res.redirect("/");
   }
 );
-
