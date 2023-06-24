@@ -1,13 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url(https://fonts.googleapis.com/css?family=Readex+Pro:200,300,regular,500,600,700);
-@import url(https://fonts.googleapis.com/css?family=Pacifico:regular);
+@import url('https://fonts.googleapis.com/css?family=Readex+Pro:200,300,regular,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Pacifico:regular');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&family=Roboto+Slab&display=swap');
 
 * {
-  font-family: "Readex pro";
+  font-family:  Readex pro, sans-serif;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 body{
   margin: auto;
@@ -17,7 +19,8 @@ body{
 }  
 
 body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+  width: 0.6rem;     
+          /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
@@ -27,7 +30,8 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #c88572;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid #505f2f;  /* creates padding around scroll thumb */
+  border: 3px solid #505f2f;
+    /* creates padding around scroll thumb */
 }
 
 
@@ -125,17 +129,79 @@ body::-webkit-scrollbar-thumb {
   transform: translate(-0.25rem,-0.25rem);
   background: var(--hover-bg);
   box-shadow: 0.25rem 0.25rem var(--bg);
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
 }
 
 .button:active {
   transform: translate(0);
   box-shadow: none;
 }
+.nav-button {
+  --bg: #505f2f;
+  --hover-bg: #c88572;
+  --hover-text: #f7ebdb;
+  color: #c88572;
+  font-family: 'Oswald';
+  font-size: 1.1rem;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.5em 1.5em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.nav-button:hover {
+  color: var(--hover-text);
+  transform: translate(0.25rem,0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.nav-button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
 
 .blogCard{
-  /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;*/
-  /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;  */
-  box-shadow: 5px 5px 0px 0px rgb(200, 133, 114);
+  background-color: #c88572;
+  color: #f7ebdb;
+  border: #505f2f 4px solid;
+  box-shadow: 5px 5px 0px 0px #505f2f;
+  transition: 0.2s;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+.blogCard:hover{
+  transform: translate(0.25rem,0.25rem);
+  box-shadow: -0.25rem -0.25rem var(--bg);
+}
+.blogCard:active{
+  
+    transform: translate(0);
+    box-shadow: none;
+  
+}
+.findCard{
+  background-color: #c88572;
+  color: #f7ebdb;
+  border: #505f2f 4px solid;
+  box-shadow: 5px 5px 0px 0px #505f2f;
+  margin: 0.5rem; 
+  width: 100vw;
+  transition: 0.2s;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+}
+.findCard:hover{
+  transform: translate(0.25rem,0.25rem);
+  box-shadow: -0.25rem -0.25rem var(--bg);
+}
+.findCard:active{
+  
+    transform: translate(0);
+    box-shadow: none;
+  
 }
 
 .hero{
@@ -161,4 +227,14 @@ video{
   overflow: hidden;
  color: white;
 }
-.buffer { height: 40px; }
+
+.min-h-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add some margin to the card */
+.max-w-md {
+  margin: 2rem;
+}

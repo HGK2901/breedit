@@ -7,17 +7,17 @@ const Hero = () => {
     <>
       
       <div className="relative">
-        <video src={videobg} autoPlay loop muted className="w-full h-auto filter brightness-50" />
+        <video src={videobg} autoPlay loop muted className="w-full filter md:h-auto md:max-w-full brightness-50" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-transparent p-4 text-center  ">
-            <h1 className="text-4xl text-[#f7ebdb] mb-4">welcome</h1>
-            <p className="text-[#f7ebdb] mb-4">
-              just breedit breedti....breaking news 6 man raps a lizard by
+            <h1 className=" text-[#f7ebdb] mb-4 text-4xl">WELCOME</h1>
+            <p className="text-[#f7ebdb] mb-4 text-2xl">
+              just breedit breedit....breaking news 6 man raps a lizard by
               listening song breedit by nirupam
             </p>
             <div className="mt-4">
-              <button className="button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
-                Button 1
+              <button className="button text-xl py-2 px-4 mt-4 mr-2">
+                 DEDO
               </button>
             </div>
           </div>

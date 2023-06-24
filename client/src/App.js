@@ -13,20 +13,10 @@ import Profile from "./Pages/Profile";
 import Registration from "./Pages/Registration";
 import Login from "./Pages/Login";
 
-//requirements
-// const bodyParser = require("body-parser")
-// const express = require("express");
-
-// const app = express();
-// app.use(express.static("public"));
-// app.use(bodyParser.urlencoded({
-//   extended: true
-// }));
-
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/breedit" element={<Home />} />
       <Route path="/findPet" element={<FindPet />} />
       <Route path="/onboarding" element={<OnBoarding />} />
       <Route path="/chat" element={<ChatPage />} />

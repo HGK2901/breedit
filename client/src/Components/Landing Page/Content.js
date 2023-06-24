@@ -3,8 +3,8 @@ import React from 'react'
 const Content = () => {
   return (
     <div>
-        <section className="text-[#505f2f] body-font">
-  <div className="container px-5 py-24 mx-auto">
+        <section className="text-[#505f2f] body-font md:m-0 lg:m-16 lg:rounded-3xl md:rounded-none  ">
+  <div className="container px-5 pt-8 mx-auto">
     <div className="flex flex-wrap w-full mb-20">
       <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-[#c88572] ">CONTENT</h1>
@@ -17,7 +17,7 @@ const Content = () => {
         <div className="bg-[#505f2f] p-6 rounded-lg blogCard">
           <img className="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/723x403" alt="content"/>
           <h3 className="tracking-widest text-[#f7ebdb] text-xs font-medium title-font">SUBTITLE</h3>
-          <h2 className="text-lg text-[#c88572] font-medium title-font mb-4">San Francisco</h2>
+          <h2 className="text-lg  font-medium title-font mb-4">San Francisco</h2>
           <p className="leading-relaxed text-base text-[#f7ebdb] ">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>
@@ -25,7 +25,7 @@ const Content = () => {
         <div className="bg-[#505f2f] p-6 rounded-lg blogCard">
           <img className="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/723x403" alt="content"/>
           <h3 className="tracking-widest text-[#f7ebdb] text-xs font-medium title-font">SUBTITLE</h3>
-          <h2 className="text-lg text-[#c88572] font-medium title-font mb-4">San Francisco</h2>
+          <h2 className="text-lg  font-medium title-font mb-4">San Francisco</h2>
           <p className="leading-relaxed text-base text-[#f7ebdb] ">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>
@@ -33,7 +33,7 @@ const Content = () => {
         <div className="bg-[#505f2f] p-6 rounded-lg blogCard">
           <img className="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/723x403" alt="content"/>
           <h3 className="tracking-widest text-[#f7ebdb] text-xs font-medium title-font">SUBTITLE</h3>
-          <h2 className="text-lg text-[#c88572] font-medium title-font mb-4">San Francisco</h2>
+          <h2 className="text-lg  font-medium title-font mb-4">San Francisco</h2>
           <p className="leading-relaxed text-base text-[#f7ebdb] ">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>
@@ -41,7 +41,7 @@ const Content = () => {
         <div className="bg-[#505f2f] p-6 rounded-lg blogCard">
           <img className="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/723x403" alt="content"/>
           <h3 className="tracking-widest text-[#f7ebdb] text-xs font-medium title-font">SUBTITLE</h3>
-          <h2 className="text-lg text-[#c88572] font-medium title-font mb-4">San Francisco</h2>
+          <h2 className="text-lg  font-medium title-font mb-4">San Francisco</h2>
           <p className="leading-relaxed text-base text-[#f7ebdb] ">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>

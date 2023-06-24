@@ -26,7 +26,7 @@ const FindPetPage = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gray-100">
+      <div className="min-h-screen bg-[#f7ebdb] mt-[3.5rem] overflow-x-hidden ">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
             Find Link Pet
@@ -42,7 +42,7 @@ const FindPetPage = () => {
                 className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter breed"
                 value={breed}
-                onChange={(e) => setBreed(e.target.value)}
+                onChange={(e) => setBreed(e.target.vaue)}
               />
             </div>
             <div className="flex items-center gap-2">
@@ -86,7 +86,7 @@ const FindPetPage = () => {
             </div>
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className=" text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 button"
             >
               Search
             </button>
@@ -94,14 +94,14 @@ const FindPetPage = () => {
           {/* Display pet listings here */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {/* Placeholder for pet cards */}
-            <div className="bg-white shadow-md rounded-md p-4">
+            <div className="bg-white shadow-md rounded-md p-4 blogCard">
               <h3 className="text-lg font-semibold mb-2">Pet Name</h3>
               <p className="text-gray-600">Breed: Breed Name</p>
               <p className="text-gray-600">Age: 2 years</p>
               <p className="text-gray-600">Size: Medium</p>
               <p className="text-gray-600">Color: Brown</p>
             </div>
-            <div className="bg-white shadow-md rounded-md p-4">
+            <div className="bg-white shadow-md rounded-md p-4 blogCard">
               <h3 className="text-lg font-semibold mb-2">Pet Name</h3>
               <p className="text-gray-600">Breed: Breed Name</p>
               <p className="text-gray-600">Age: 3 years</p>
@@ -110,10 +110,10 @@ const FindPetPage = () => {
             </div>
             {/* Add more pet cards as needed */}
           </div>
-          <section className="text-gray-600 body-font">
+          <section className="text-gray-600 body-font w-[100vw] overflow-hidden  " >
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap -m-4">
-            <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <div className="flex flex-wrap -m-4 ">
+            <div className="lg:w-1/4 md:w-1/2 p-4 w-full findCard ">
               <Link className="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="ecommerce"
@@ -132,7 +132,7 @@ const FindPetPage = () => {
                 <p className="mt-1">$16.00</p>
               </div>
             </div>
-            <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <div className="lg:w-1/4 md:w-1/2 p-4 w-full findCard">
               <Link className="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="ecommerce"
@@ -150,7 +150,7 @@ const FindPetPage = () => {
                 <p className="mt-1">$21.15</p>
               </div>
             </div>
-            <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <div className="lg:w-1/4 md:w-1/2 p-4 w-full findCard">
               <Link className="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="ecommerce"
@@ -168,7 +168,7 @@ const FindPetPage = () => {
                 <p className="mt-1">$12.00</p>
               </div>
             </div>
-            <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <div className="lg:w-1/4 md:w-1/2 p-4 w-full findCard">
               <Link className="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="ecommerce"
@@ -186,8 +186,8 @@ const FindPetPage = () => {
                 <p className="mt-1">$18.40</p>
               </div>
             </div>
-            <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
-              <Link className="block relative h-48 rounded overflow-hidden">
+            <div className="lg:w-1/4 md:w-1/2 p-4 w-full findCard">
+              <Link className="block relative h-48 rounded overflow-hidden ">
                 <img
                   alt="ecommerce"
                   className="object-cover object-center w-full h-full block"
@@ -204,7 +204,7 @@ const FindPetPage = () => {
                 <p className="mt-1">$16.00</p>
               </div>
             </div>
-            <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <div className="lg:w-1/4 md:w-1/2 p-4 w-full findCard">
               <Link className="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="ecommerce"
@@ -222,7 +222,7 @@ const FindPetPage = () => {
                 <p className="mt-1">$21.15</p>
               </div>
             </div>
-            <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <div className="lg:w-1/4 md:w-1/2 p-4 w-full findCard">
               <Link className="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="ecommerce"
@@ -240,7 +240,7 @@ const FindPetPage = () => {
                 <p className="mt-1">$12.00</p>
               </div>
             </div>
-            <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <div className="lg:w-1/4 md:w-1/2 p-4 w-full findCard">
               <Link className="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="ecommerce"

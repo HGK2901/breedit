@@ -3,7 +3,7 @@ import React from 'react'
 const Testinomials = () => {
   return (
     <div>
-        <section className="text-gray-600 body-font">
+        <section className="text-gray-600 body-font bg-[#c88572] rounded-3xl md:m-0 lg:m-16 mt-0 lg:rounded-3xl md:rounded-none blogCard">
   <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-wrap -m-4">
       <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">

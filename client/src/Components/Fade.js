@@ -24,7 +24,7 @@ const Fade = ({ children, delay  }) => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, );
 
   return (
     <div ref={elementRef} className={`fade ${isVisible ? 'visible' : ''}`}>

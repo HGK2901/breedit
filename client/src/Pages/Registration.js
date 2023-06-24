@@ -1,192 +1,133 @@
-import React from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Navbar from "../Components/Navbar";
+import React, { useState } from "react";
+import { Link } from "react-router-dom"; // If using React Router
 
-const Registration = () => {
-  const history = useNavigate();
+const Register = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
-  // const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [petName, setPetName] = useState("");
-  const [ownerName, setOwnerName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [age, setAge] = useState("");
-  const [breed, setBreed] = useState("");
-  const [notes, setNotes] = useState("");
+  const { name, email, password } = formData;
 
-  async function registerUser(event) {
-    event.preventDefault();
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-    const response = await fetch("http://localhost:3000/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ownerName,
-        email,
-        password,
-        petName,
-        phone,
-        age,
-        breed,
-        notes,
-      }),
-    });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // Add form validation
+      if (!name || !email || !password) {
+        // Handle form validation error, e.g., display an error message
+        return;
+      }
 
-    const data = await response.json();
+      // Add API call to register the user
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (data.status === "ok") {
-      history.push("/login");
+      if (response.ok) {
+        // Handle successful registration, e.g., redirect to a success page
+        console.log("User registered successfully!");
+      } else {
+        // Handle registration error, e.g., display an error message
+        console.error("Registration failed.");
+      }
+    } catch (error) {
+      // Handle any other errors, e.g., display a generic error message
+      console.error("An error occurred during registration:", error);
     }
-  }
+  };
 
   return (
-    <>
-      <Navbar />
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <div className="max-w-xl w-full bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-          <h2 className="text-2xl font-bold mb-6">Pet Onboarding</h2>
-          <form onSubmit={registerUser}>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="petName"
-              >
-                Pet Name
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="petName"
-                type="text"
-                placeholder="Enter pet name"
-                value={petName}
-                onChange={(e) => setPetName(e.target.value)}
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="name"
-              >
-                Owner Name
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="name"
-                type="text"
-                placeholder="Enter owner name"
-                value={ownerName}
-                onChange={(e) => setOwnerName(e.target.value)}
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="email"
-              >
-                Email
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="email"
-                type="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="phone"
-              >
-                Phone
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="phone"
-                type="tel"
-                placeholder="Enter phone number"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="age"
-              >
-                Age
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="age"
-                type="text"
-                placeholder="Enter pet's age"
-                value={age}
-                onChange={(e) => setAge(e.target.value)}
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="breed"
-              >
-                Breed
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="breed"
-                type="text"
-                placeholder="Enter pet's breed"
-                value={breed}
-                onChange={(e) => setBreed(e.target.value)}
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="notes"
-              >
-                Additional Notes
-              </label>
-              <textarea
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="notes"
-                rows="4"
-                placeholder="Enter any additional notes"
-                value={notes}
-                onChange={(e) => setNotes(e.target.value)}
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="breed"
-              >
-                Breed
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                type="password"
-                placeholder="Password"
-              />
-            </div>
-            <div className="mb-4">
-              <button className="button" type="submit" value="Register">
-                Register
-              </button>
-            </div>
-          </form>
-        </div>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="w-full max-w-md">
+        <form
+          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          onSubmit={handleSubmit}
+        >
+          <h2 className="text-2xl font-bold mb-6">Register</h2>
+
+          <div className="mb-4">
+            <label
+              htmlFor="name"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={handleChange}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              required
+            />
+          </div>
+
+          <div className="mb-4">
+            <label
+              htmlFor="email"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="username"
+              value={email}
+            
+              onChange={handleChange}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              required
+            />
+          </div>
+
+          <div className="mb-6">
+            <label
+              htmlFor="password"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={password}
+              onChange={handleChange}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              required
+            />
+          </div>
+
+          <div className="flex items-center justify-between">
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+              Register
+            </button>
+
+            <Link
+              to="/login" // Replace with your login route
+              className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+            >
+              Already have an account? Login
+            </Link>
+          </div>
+        </form>
       </div>
-    </>
+    </div>
   );
 };
 
-export default Registration;
+export default Register;
